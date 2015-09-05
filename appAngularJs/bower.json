@@ -1,0 +1,19 @@
+{
+  "name": "Angularapp",
+  "version": "1.0.0",
+  "authors": [
+    "Ben Ouezdou Ahmed <ahmed.b.ouezdou@gmail.com>"
+  ],
+  "description": "Live coding & Hands On AngularJS",
+  "license": "MIT",
+
+  "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "angular-resource": "*",
+    "bootstrap.css": "*",
+    "angular-i18n": "*",
+    "jquery": "*",
+    "angular-strap": "*"
+  }
+}

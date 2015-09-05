@@ -1,0 +1,16 @@
+{
+  "name": "Angularapp",
+  "version": "1.0.0",
+  "description": "AngularJS",
+  "author": "Ben Ouezdou Ahmed <ahmed.b.ouezdou@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp":"*",
+    "gulp-connect": "*",
+    "gulp-inject": "*",
+    "livereload": "*",
+    "gulp-bower":"*",
+    "gulp-concat-vendor":"*",
+    "gulp-notify":"*"
+  }
+}

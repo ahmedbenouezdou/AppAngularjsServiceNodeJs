@@ -1,0 +1,22 @@
+
+{
+  "name": "serviceNodeJs",
+  "version": "1.0.0",
+  "description": "AngularJS",
+  "author": "Ben Ouezdou Ahmed <ahmed.b.ouezdou@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+  "nano":"*",
+  "node-couchdb":"*",
+  "express":"*",
+  "body-parser":"*",
+  "http":"*",
+  "path":"*",
+  "serve-static":"*",
+  "gulp":"*"
+  }
+}
+
