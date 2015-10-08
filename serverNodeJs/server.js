@@ -25,5 +25,5 @@ app.put('/serverCoutchBD', api.putUpdate);
 app.delete('/serverCoutchBD/:id',api.removeDoc);
 
 server.listen(app.get('port'), function() {
-    console.log('✔︎︎ Express server listening on http://localhost:%d/'.green, app.get('port'));
+    console.log('✔︎︎ Express server listening on http://localhost:%d/', app.get('port'));
 });
