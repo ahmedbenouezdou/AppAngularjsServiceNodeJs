@@ -1,0 +1,52 @@
+<md-toolbar>
+    <div class="md-toolbar-tools md-whiteframe-z1">
+		<md-icon md-svg-icon="notification:sms"></md-icon>
+        <h2>Eurus Lab</h2>
+    </div>
+</md-toolbar>
+<md-content ng-controller="leftCtrl">
+
+    <nav ui-nav>
+        <ul class="nav">
+            <li ui-sref-active="active">
+                <a md-ink-ripple ui-sref="ui.analyse">
+                    <md-icon md-svg-icon="action:dashboard"></md-icon>
+                    <span flex>Analyse</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a md-ink-ripple ui-sref="ui.contact">
+                    <md-icon md-svg-icon="social:people"></md-icon>
+                    <span flex>Tableau de bord</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a md-ink-ripple ui-sref="ui.demande">
+                    <md-icon md-svg-icon="action:extension"></md-icon>
+                    <span flex>Demandes</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <md-divider></md-divider>
+
+    <nav ui-nav>
+        <ul class="nav">
+            <li ui-sref-active="active">
+                <a md-ink-ripple ui-sref="ui.dataBridge">
+                    <md-icon md-svg-icon="action:settings"></md-icon>
+                    <span flex>DataBridge</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a md-ink-ripple ui-sref="ui.parameters">
+                    <md-icon md-svg-icon="action:settings"></md-icon>
+                    <span flex>Paramètres</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</md-content>

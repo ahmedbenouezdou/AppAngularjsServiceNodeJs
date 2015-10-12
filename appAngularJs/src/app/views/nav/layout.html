@@ -1,0 +1,12 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ui-view="aside@">
+</md-sidenav>
+
+<ui-view name="container" layout="column" flex></ui-view>
+
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+    <md-content ng-controller="rightCtrl" class="md-padding">
+        <md-button ng-click="close()" class="md-primary">
+            Close Sidenav Right
+        </md-button>
+    </md-content>
+</md-sidenav>

@@ -11,6 +11,7 @@
     "livereload": "*",
     "gulp-bower":"*",
     "gulp-concat-vendor":"*",
-    "gulp-notify":"*"
+    "gulp-notify":"*",
+    "run-sequence":"*"
   }
 }

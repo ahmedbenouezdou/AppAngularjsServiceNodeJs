@@ -1,5 +1,5 @@
 appAngularJs/node_modules
-appAngularJs/lib
+appAngularJs/src/lib
 
 serverNodeJs/node_modules
 .idea

@@ -1,6 +1,6 @@
 angular.module('servicesApp',[]);
 
-angular.module('servicesApp').factory('serviceFactory',function($http){
+angular.module('servicesApp').factory('',function($http){
 
     return {
         "serviceGetAll" : function(URL){

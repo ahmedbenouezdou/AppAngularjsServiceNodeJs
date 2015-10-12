@@ -1,0 +1,33 @@
+
+
+<!-- header-->
+<header class="page-header">
+    <h1>List of users
+        <button class="btn btn-primary" bs-modal="'partials/user-form-modal.html'">Add user</button>
+    </h1>
+</header>
+
+<!-- liste des films -->
+<div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Last name </th>
+            <th>FirstName</th>
+            <th>Année de sortie</th>
+            <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="movie in movies">
+            <td>{{$index + 1}}</td>
+            <td>{{movie.title | uppercase}}</td>
+            <td>{{movie.directors}}</td>
+            <td>{{movie.releaseYear}}</td>
+            <td>{{movie.rate | stars}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

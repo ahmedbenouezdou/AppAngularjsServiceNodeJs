@@ -1,3 +1,8 @@
+# Angularjs & Service NodeJs & CouchDB
+
+This is exemple for connect app Angularjs and Service NodeJs CouchDB
+
+
 # Required
 
 npm
@@ -11,12 +16,11 @@ npm install -g gulp
 # Install
 
 ``` shell
- cd appAngularJS
+cd appAngularJS
+npm install ; gulp
 
-``` npm install ; gulp
 
-
-``` cd serverNodejs
+cd serverNodejs
 npm install ; npm start
 ```
 

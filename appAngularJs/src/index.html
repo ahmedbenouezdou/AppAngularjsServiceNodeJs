@@ -1,21 +1,74 @@
 <!DOCTYPE html>
 <html ng-app="appAngularService">
 <head>
-    <title>Exmple</title>
-    <!-- inject:css -->
-    <!-- endinject -->
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--<script data-main="js/config.js" src="js/libs/requirejs/require.js"></script>-->
+    <script src="js/libs/angular/angular.js"></script>
+    <script src="js/libs/angular-resource/angular-resource.js"></script>
+    <script src="js/libs/angular-route/angular-route.js"></script>
+    <script src="js/libs/angular-cookies/angular-cookies.js"></script>
 </head>
+
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">La bibliothèque d’Henri Potier</a>
+            </div>
 
-    <div ng-view >
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-    </div>
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li class="dropdown">
+                        <a href="#/panier"><span class="glyphicon glyphicon-shopping-cart"></span>Mon panier {{panier.length}}
+                            <span ng-if="panier.length<2">article</span>
+                            <span ng-if="panier.length>1">articles</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+
+        <ng-view></ng-view>
 
     <!-- inject:js -->
+
+
     <script src="js/vendor.js"></script>
+
+
     <script src="app/app.js"></script>
-    <script src="app/service.js"></script>
-    <script src="app/user.js"></script>
+
+
+    <script src="app/service/service.js"></script>
+
+
+    <script src="app/page/enter.js"></script>
+
+
+    <script src="app/page/nav.js"></script>
+
+
+    <script src="app/views/nav/navCtrl.js"></script>
+
+
     <!-- endinject -->
 </body>
 </html>

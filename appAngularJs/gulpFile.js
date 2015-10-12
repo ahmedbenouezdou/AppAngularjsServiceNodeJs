@@ -43,14 +43,14 @@ gulp.task('styles', function() {
 /****** Task create dowloud bower file ******/
 gulp.task('bower', function() {
     return bower()
-        .pipe(gulp.dest('./lib'))
+        .pipe(gulp.dest('./src/lib'))
 });
 
 /****** Task create dowloud bower file ******/
 
 
 gulp.task('scripts-vendor', function () {
-    return gulp.src('./lib/*')
+    return gulp.src('./src/lib/*')
         .pipe(vendor('vendor.js'))
         .pipe(gulp.dest('./src/js/'))
         .pipe(connect.reload())
@@ -59,9 +59,18 @@ gulp.task('scripts-vendor', function () {
         }));
 });
 
+gulp.task('scripts-css', function () {
+    return gulp.src('./src/lib/bootstrap/dist/css/*.min.css')
+        .pipe(vendor('cssmain.min.css'))
+        .pipe(gulp.dest('./src/css/'))
+        .pipe(connect.reload())
+        .pipe(notify({
+            message: 'Scripts vendor task complete'
+        }));
+});
 gulp.task('index', function () {
     return gulp.src('src/*.html')
-        .pipe(inject(gulp.src(['src/js/vendor.js', 'src/app/**/*.js', 'src/css/**/*.css'], {
+        .pipe(inject(gulp.src(['src/js/vendor.js', 'src/app/**/*.js', './src/css/*.min.css'], {
             read: false
         }), {
             ignorePath: 'src',
@@ -74,11 +83,11 @@ gulp.task('index', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['./src/*.html'], ['html']);
+    gulp.watch(['./src/**/*.html'], ['html']);
     gulp.watch(['./src/**/*.scss', 'layouts/**/*.css'], ['build-css']);
     gulp.watch(['./src/app/**/*.js'], ['build-js']);
 });
 
 gulp.task('default', function (callback) {
-    runSequence('bower', ['scripts-vendor'], 'index','connect', 'watch', callback);
+    runSequence('bower', 'index','connect', 'watch', callback);
 });
